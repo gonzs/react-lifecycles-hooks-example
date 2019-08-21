@@ -1,23 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import ClockClass from "./ClassApproach/Clock";
+import TimekeeperClass from "./ClassApproach/Timekeeper";
+import CounterClass from "./ClassApproach/Counter";
+import ClockHooks from "./HooksApproach/Clock";
+import TimekeeperHooks from "./HooksApproach/Timekeeper";
+import CounterHooks from "./HooksApproach/Counter";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ClockClass />
+        <TimekeeperClass />
+        <CounterClass />
+        <br />
+        <ClockHooks />
+        <TimekeeperHooks />
+        <CounterHooks />
       </header>
     </div>
   );
