@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Jumbotron from "react-bootstrap/Jumbotron";
 
 class ClockClass extends Component {
   constructor(props) {
@@ -20,7 +21,11 @@ class ClockClass extends Component {
   render() {
     const time = this.state.date.toLocaleTimeString();
 
-    return <h2>{time}</h2>;
+    return (
+      <Jumbotron>
+        <h2>{time}</h2>{" "}
+      </Jumbotron>
+    );
   }
 }
 export default ClockClass;

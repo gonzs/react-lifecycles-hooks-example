@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Jumbotron from "react-bootstrap/Jumbotron";
 
 const CounterHooks = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <div>
+    <Jumbotron>
       <h1>{count}</h1>
-      <button onClick={() => setCount(count + 1)}>Laps</button>
-    </div>
+      <Button variant="secondary" onClick={() => setCount(count + 1)}>
+        Laps
+      </Button>
+    </Jumbotron>
   );
 };
 export default CounterHooks;

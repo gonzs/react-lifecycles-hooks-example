@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Button from "react-bootstrap/Button";
+import Jumbotron from "react-bootstrap/Jumbotron";
 
 class TimekeeperClass extends Component {
   constructor(props) {
@@ -52,14 +54,20 @@ class TimekeeperClass extends Component {
     const seconds = this.state.seconds;
     const miliseconds = this.state.miliseconds;
     return (
-      <div>
+      <Jumbotron>
         <h2>
           {minutes}:{seconds}:{miliseconds}
         </h2>
-        <button onClick={this.start}>Start</button>
-        <button onClick={this.stop}>Stop</button>
-        <button onClick={this.refresh}>Refresh</button>
-      </div>
+        <Button variant="success" onClick={this.start}>
+          Start
+        </Button>
+        <Button variant="danger" onClick={this.stop}>
+          Stop
+        </Button>
+        <Button variant="secondary" onClick={this.refresh}>
+          Refresh
+        </Button>
+      </Jumbotron>
     );
   }
 }

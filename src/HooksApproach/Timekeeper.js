@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import Button from "react-bootstrap/Button";
+import Jumbotron from "react-bootstrap/Jumbotron";
 
 const TimekeeperHooks = () => {
   const [miliseconds, setMiliseconds] = useState(0);
@@ -40,13 +42,18 @@ const TimekeeperHooks = () => {
   }, delay);
 
   return (
-    <div>
+    <Jumbotron>
       <h2>
         {minutes}:{seconds}:{miliseconds}
       </h2>
-      <button onClick={() => setDelay(10)}>Start</button>
-      <button onClick={() => setDelay(null)}>Stop</button>
-      <button
+      <Button variant="success" onClick={() => setDelay(10)}>
+        Start
+      </Button>
+      <Button variant="danger" onClick={() => setDelay(null)}>
+        Stop
+      </Button>
+      <Button
+        variant="secondary"
         onClick={() => {
           setMiliseconds(0);
           setSeconds(0);
@@ -54,8 +61,8 @@ const TimekeeperHooks = () => {
         }}
       >
         Refresh
-      </button>
-    </div>
+      </Button>
+    </Jumbotron>
   );
 };
 export default TimekeeperHooks;

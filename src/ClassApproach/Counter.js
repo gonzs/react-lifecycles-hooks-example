@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Button from "react-bootstrap/Button";
+import Jumbotron from "react-bootstrap/Jumbotron";
 
 class CounterClass extends Component {
   constructor(props) {
@@ -8,12 +10,15 @@ class CounterClass extends Component {
 
   render() {
     return (
-      <div>
+      <Jumbotron>
         <h1>{this.state.count}</h1>
-        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+        <Button
+          variant="secondary"
+          onClick={() => this.setState({ count: this.state.count + 1 })}
+        >
           Laps
-        </button>
-      </div>
+        </Button>
+      </Jumbotron>
     );
   }
 }
